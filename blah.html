@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='utf-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1' />
+    <title>Test Analytics Project</title>
+    <link
+      href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css'
+      rel='stylesheet'
+      integrity='sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN'
+      crossorigin='anonymous'
+    />
+
+  </head>
+  <body>
+    <header>
+      <nav class='navbar navbar-expand-lg bg-body-tertiary bg-primary'>
+        <div class='container-fluid'>
+          <a class='navbar-brand' href='#'>Famous Deli & Grill </a>
+          <button
+            class='navbar-toggler'
+            type='button'
+            data-bs-toggle='collapse'
+            data-bs-target='#navbarSupportedContent'
+            aria-controls='navbarSupportedContent'
+            aria-expanded='false'
+            aria-label='Toggle navigation'
+          >
+            <span class='navbar-toggler-icon'></span>
+          </button>
+          <div class='collapse navbar-collapse' id='navbarSupportedContent'>
+            <ul class='navbar-nav me-auto mb-2 mb-lg-0'>
+              <li class='nav-item'>
+                <a class='nav-link active' aria-current='page' href='#'>Home</a>
+              </li>
+              <li class='nav-item'>
+                <a class='nav-link' href='#'>Link</a>
+              </li>
+             
+              
+            </ul>
+            <form class='d-flex' role='search'>
+              <input
+                class='form-control me-2'
+                type='search'
+                placeholder='Search'
+                aria-label='Search'
+                id='userInput'
+              />
+              <button class='btn btn-outline-success' type='submit' onclick='sendUserSearch()'>
+                Search
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+     <div class='container' id='divvy'>
+                <div class='row'>
+
+                    
+                    <div class='mx-auto col' id='maindiv'>
+                        <a class='nav-link text-align-center' href='portfolio.html'>
+                            Famous Deli & Grill 
+                        </a>
+                        <p>
+                            <i>
+                                Where your sandwich dreams come true
+                            </i>
+
+                        </p>
+                        
+
+                    </div>
+                    
+                </div>
+            </div>
+            <br><br><br>
+               
+   
+<div class='container'><h1>Hi there<br/><span id='username'></span>,</h1>
+    <script>
+       let userName = ',    ' + PC_PROFILE_OBJ.uid;
+       document.getElementById('username').innerHTML = userName;
+    </script></div>
+<br><br><br>
+    <div class='container text-dark'>
+       
+<div class='container text-center form-check'>
+  <input class='form-check-input' type='checkbox' value='true' id='flexCheckIndeterminate'>
+  <label class='form-check-label' for='flexCheckIndeterminateid'>
+    Click Here to unsubscribe from all connections
+  </label>
+  <br />
+  <!--<button class='btn btn-primary' type='submit' >submit</button>-->
+</div>
+
+        <div class='row spacer'><br/></div><div class='row spacer'><br/></div><div class='row spacer'><br/></div>
+    </div>
+<br/><br/><br/><br/><br/><br/>
+<div>
+<script>
+let langPref = btSubscriberJson.properties.preferred_language;
+let htmlBlock = '';
+document.getElementById('langPref').innerHTML = langPref
+//document.getElementById('htmlBlock').innerHTML = htmlBlock;
+if (langPref !== 'english' ){
+htmlBlock += "<main style='background-color: #fff; line-height: 2rem; margin: 0 auto rem; max-width: 49rem; padding: clamp(0.5rem, 10%, 3rem) clamp(1.5rem, 5%, 6rem);'> <p> Esta dirección de email está actualmente inscrita para recibir las siguientes comunicaciones. Por favor, selecciona el tipo de comunicación por email que te gustaría recibir de ahora en adelante. </p> <label data-nl-format='datetime' ><strong >Tu email actual es: <span class='nl-dce-field nl-dce-done' id='email' data-nl-expr='/context/profile/email' data-nl-type='string' contenteditable='false' ><span id='username'></span> <script> let userName = '    ' + PC_PROFILE_OBJ.uid; document.getElementById('username').innerHTML = userName; </script> <hr /> <div data-nl-format='datetime'> <strong>Sobre cuál de estos temas te gustaría recibir noticias de nosotros:</strong> </div> <div></div> <hr /> <section class='checkbox-section'> <div> <label for='events' data-nl-format='datetime'> <input type='checkbox' id='events' name='events' value='Events you might be interested in' class='nl-dce-done' data-nl-bindto='service' data-nl-servicename='srpEvents' data-nl-servicelabel='01. Events you might be interested in' data-nl-checkboxbehavior='subscription' checked /> <span>Eventos que pueden interesarte</span> </label> </div> <div> <label for='ways'> <input type='checkbox' id='ways' name='ways' value='Ways to save energy and money' class='nl-dce-done' data-nl-bindto='service' data-nl-servicename='srpSaveEnergy' data-nl-servicelabel='02. Ways to save energy and money' data-nl-checkboxbehavior='subscription' checked /> <span>Formas de ahorrar energía y dinero</span> </label> </div> <div> <label for='deals' data-nl-format='datetime'> <input type='checkbox' id='deals' name='deals' value='Deals on energy efficient products - SRP Marketplace' class='nl-dce-done' data-nl-checkboxbehavior='subscription' data-nl-bindto='service' data-nl-servicename='srpMarketplace' data-nl-servicelabel='Deals on Energy Efficient products - SRP Marketplace' checked /> <span>Ofertas en productos de eficiencia energética - SRP Marketplace</span> </label> </div> <div> <label for='price'> <input type='checkbox' id='price' name='price' value='Price plans and billing options' class='nl-dce-done' data-nl-bindto='service' data-nl-servicename='srpPricePlans' data-nl-servicelabel='03. Price plans and billing options' data-nl-checkboxbehavior='subscription' checked /> <span>Planes de precios y opciones de facturación</span> </label> </div> <div> <label for='environment'> <input type='checkbox' id='environment' name='environment' value='Environment and sustainability' class='nl-dce-done' data-nl-bindto='service' data-nl-servicename='srpEnvSustain' data-nl-servicelabel='04. Environment and sustainability' data-nl-checkboxbehavior='subscription' checked /> <span>Medio ambiente y sostenibilidad</span> </label> </div> <div> <label for='safety' data-nl-format='datetime'> <input type='checkbox' id='safety' name='safety' value='Safety information' class='nl-dce-done' data-nl-bindto='service' data-nl-servicename='srpSafetyInfo' data-nl-servicelabel='05. Safety information' data-nl-checkboxbehavior='subscription' checked /> <span>Información sobre seguridad</span> </label> </div> <hr /> <section class='checkbox-section'> <label for='all'>      <input type='checkbox' id='all' name='all' value='true' class='nl-dce-done' data-nl-checkboxbehavior='subscription' data-nl-bindto='xpath' data-nl-uncheckedvalue='false' data-nl-xpath='/context/profile/blackListEmail' data-nl-label='No longer contact by email' data-nl-type='boolean' /> <span style='margin-left:25px;'>No recibir comunicaciones por emails de marketing.</span> </label> <p> Nota: Seguirás recibiendo emails transaccionales de SRP sobre su factura y sus pagos si has optado por recibirlos. </p> <button id='save-button' data-nl-checkboxbehavior='subscription' data-nl-bindto='action' data-nl-format='datetime' data-nl-action='next' > Save preferences </button> </section> </section> <section style='height:300px;'> <br /> <br /> <br /></section> </main>"
+}else{
+htmlBlock += "<main style='background-color: #fff; line-height: 2rem; margin: 0 auto rem; max-width: 49rem; padding: clamp(0.5rem, 10%, 3rem) clamp(1.5rem, 5%, 6rem);'> <p> This email address is currently subscribed to receive the following emails. Please select what type of email communication you would like to receive moving forward. </p> <label data-nl-format='datetime' ><strong >Your current email is: <span class='nl-dce-field nl-dce-done' id='email' data-nl-expr='/context/profile/email' data-nl-type='string' contenteditable='false' ><span id='username'></span> <script> let userName = '    ' + PC_PROFILE_OBJ.email; document.getElementById('username').innerHTML = userName; </script></span ></strong ></label > <hr style='width:50%'/> <div data-nl-format='datetime'> <strong>Which of these would you like to hear from us on:</strong> </div> <div></div> <hr style='width:50%'/> <section class='checkbox-section'> <div> <label for='events' data-nl-format='datetime'> <input type='checkbox' id='events' name='events' value='Events you might be interested in' class='nl-dce-done' data-nl-bindto='service' data-nl-servicename='srpEvents' data-nl-servicelabel='01. Events you might be interested in' data-nl-checkboxbehavior='subscription' checked /> <span>Events you might be interested in</span> </label> </div> <div> <label for='ways'> <input type='checkbox' id='ways' name='ways' value='Ways to save energy and money' class='nl-dce-done' data-nl-bindto='service' data-nl-servicename='srpSaveEnergy' data-nl-servicelabel='02. Ways to save energy and money' data-nl-checkboxbehavior='subscription' checked /> <span>Ways to save energy and money</span> </label> </div> <div> <label for='deals' data-nl-format='datetime'> <input type='checkbox' id='deals' name='deals' value='Deals on energy efficient products - SRP Marketplace' class='nl-dce-done' data-nl-checkboxbehavior='subscription' data-nl-bindto='service' data-nl-servicename='srpMarketplace' data-nl-servicelabel='Deals on Energy Efficient products - SRP Marketplace' checked /> <span>Deals on energy efficient products - SRP Marketplace</span> </label> </div> <div> <label for='price'> <input type='checkbox' id='price' name='price' value='Price plans and billing options' class='nl-dce-done' data-nl-bindto='service' data-nl-servicename='srpPricePlans' data-nl-servicelabel='03. Price plans and billing options' data-nl-checkboxbehavior='subscription' checked /> <span>Price plans and billing options</span> </label> </div> <div> <label for='environment'> <input type='checkbox' id='environment' name='environment' value='Environment and sustainability' class='nl-dce-done' data-nl-bindto='service' data-nl-servicename='srpEnvSustain' data-nl-servicelabel='04. Environment and sustainability' data-nl-checkboxbehavior='subscription' checked /> <span>Environment and sustainability</span> </label> </div> <div> <label for='safety' data-nl-format='datetime'> <input type='checkbox' id='safety' name='safety' value='Safety information' class='nl-dce-done' data-nl-bindto='service' data-nl-servicename='srpSafetyInfo' data-nl-servicelabel='05. Safety information' data-nl-checkboxbehavior='subscription' checked /> <span>Safety information</span> </label> </div> <hr style='width:50%'/> <section class='checkbox-section'> <label for='all'>      <input type='checkbox' id='all' name='all' value='true' class='nl-dce-done' data-nl-checkboxbehavior='subscription' data-nl-bindto='xpath' data-nl-uncheckedvalue='false' data-nl-xpath='/context/profile/blackListEmail' data-nl-label='No longer contact by email' data-nl-type='boolean' /> <span style='margin-left:25px;'>Opt out of all marketing emails.</span> </label> <p> Note: You will continue to receive SRP transactional emails about your bill and payments if you are currently opted in to receive those. </p> <button id='save-button' data-nl-checkboxbehavior='subscription' data-nl-bindto='action' data-nl-format='datetime' data-nl-action='next' > Save preferences </button> </section> </section> </main>"
+}
+</script>
+</div>
+    <footer class='text-white bg-primary' style='opacity: 0.7'>
+      <div class='container'>
+        <div class='row'>
+          <div class='col-6 text-center'>
+            <h5>Social</h5>
+            <a
+              class='btn btn-social-icon btn-instagram'
+              href='http://instagram.com/'
+              ><i class='fa fa-instagram'></i
+            ></a>
+            <a
+              class='btn btn-social-icon btn-facebook'
+              href='http://facebook.com/'
+              ><i class='fa fa-facebook'></i
+            ></a>
+            <a
+              class='btn btn-social-icon btn-twitter'
+              href='http://twitter.com/'
+              ><i class='fa fa-twitter'></i
+            ></a>
+            <a class='btn btn-social-icon btn-google' href='http://youtube.com/'
+              ><i class='fa fa-youtube'></i
+            ></a>
+          </div>
+          <div class='col-6 text-center'>
+            <h5>Give Us a Call</h5>
+            <a
+              role='button'
+              class='btn btn-link bg-white'
+              href='tel:+17187231886'
+              ><i class='fa fa-phone'></i> 1-(718) 723-1886</a
+            ><br />
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script
+      src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js'
+      integrity='sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL'
+      crossorigin='anonymous'
+    ></script>
+    
+  </body>
+</html>
