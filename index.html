@@ -12,6 +12,11 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
+    <script>
+            window.adobeDataLayer = window.adobeDataLayer || [];
+            window.adobeDataLayer.push({ "test1": "Hello World" });
+        </script>
+        <script src="js/adobe-client-data-layer.min.js" async defer></script>
 <!-- <script src="https://assets.adobedtm.com/7595315f3cd2/cada6bcd1297/launch-a1c5703863fa-development.min.js" async></script> -->
 <script src="https://assets.adobedtm.com/7595315f3cd2/cada6bcd1297/launch-a1c5703863fa-development.min.js" async></script>
 <script>
@@ -125,7 +130,7 @@ const options = {
   data: {source: 'api', message_uid: '1700159102345e32c4885bcc8'}
 };
 
-axios
+const blahData = axios
   .request(options)
   .then(function (response) {
     console.log(response.data);
@@ -133,6 +138,15 @@ axios
   .catch(function (error) {
     console.error(error);
   });
+  // axios
+  // .request(options)
+  // .then(function (response) {
+  //   console.log(response.data);
+  // })
+  // .catch(function (error) {
+  //   console.error(error);
+  // });
+
 } );
 </script>
 </div>
