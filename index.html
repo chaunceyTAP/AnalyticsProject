@@ -235,13 +235,14 @@ const blahData = axios
      const sendUserSearch = () => {
       var input = document.getElementById('userInput').value;
       console.log(input)
-      bt('track','test_site_user_searched',{'last_search':input},{onComplete(){
-       console.log('input tracked')
-       window.adobeDataLayer.push({ "Event": {
+      // bt('track','test_site_user_searched',{'last_search':input},{onComplete(){
+      //  console.log('input tracked')
+       
+      // }})
+      window.adobeDataLayer.push({ "Event": {
         "EventType":"test_site_user_searched",
         "SearchInput":input
        } });
-      }})
      }
     </script>
     <script>
