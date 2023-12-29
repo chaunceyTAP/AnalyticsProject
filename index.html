@@ -239,10 +239,12 @@ const blahData = axios
       //  console.log('input tracked')
        
       // }})
-      window.adobeDataLayer.push({ "Event": {
-        "EventType":"test_site_user_searched",
-        "SearchInput":input
-       } });
+      e.preventDefault();
+      // var event = { "Event": {
+      //   "EventType":"test_site_user_searched",
+      //   "SearchInput":input
+      //  } }
+      // window.adobeDataLayer.push(event);
      }
     </script>
     <script>
