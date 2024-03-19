@@ -47,6 +47,32 @@ const site_id = 'partner-dev-tap-cxm'
   'https://cdn.boomtrain.com/p13n/' + site_id + '/p13n.min.js'
 );
 </script>
+<script type="text/javascript">
+(function() {
+    window.sib = {
+        equeue: [],
+        client_key: "6onbbgpqb4z8sjvrgrd0li8o"
+    };
+    /* OPTIONAL: email for identify request*/
+     window.sib.email_id = 'chaunceyp@tapcxm.com';
+    window.sendinblue = {};
+    for (var j = ['track', 'identify', 'trackLink', 'page'], i = 0; i < j.length; i++) {
+    (function(k) {
+        window.sendinblue[k] = function() {
+            var arg = Array.prototype.slice.call(arguments);
+            (window.sib[k] || function() {
+                    var t = {};
+                    t[k] = arg;
+                    window.sib.equeue.push(t);
+                })(arg[0], arg[1], arg[2], arg[3]);
+            };
+        })(j[i]);
+    }
+    var n = document.createElement("script"),
+        i = document.getElementsByTagName("script")[0];
+    n.type = "text/javascript", n.id = "sendinblue-js", n.async = !0, n.src = "https://sibautomation.com/sa.js?key=" + window.sib.client_key, i.parentNode.insertBefore(n, i), window.sendinblue.page();
+})();
+</script>
   </head>
   <body>
     <header>
@@ -117,26 +143,83 @@ const site_id = 'partner-dev-tap-cxm'
     </div>
 <br><br><br>
 <div class="container">
-<h4>click submit to call zeta api </h4>
+<h4>click submit to send abandon cart event to CDP </h4>
 <button id="blah">submit</button>
 <script>
 
 $( "#blah" ).on( "click", function() {
  
 
+// const options = {
+//   method: 'POST',
+//   url: 'https://api.zetaglobal.net/ver2/partner-dev-tap-cxm/subscribers/chaunceyp%40tapcxm.com/unsubscribe',
+//   headers: {
+//     accept: 'application/json',
+//     Accept: 'application/json',
+//     'content-type': 'application/json',
+//     authorization: 'Basic YXBpOmIwODY2ODljZTAyYTg3Nzg1MDI0NGFmMWUzNWU5MDZi',
+//     cors:'no-cors'
+//   },
+//   data: {source: 'api', message_uid: '1700159102345e32c4885bcc8'}
+// };
+const datenow = new Date()
+const datenowstr = datenow .toISOString()
+function uuidv4() {
+  return "10000000-1000-4000-8000-100000000000".replace(/[018]/g, c =>
+    (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16)
+  );
+}
+
 const options = {
   method: 'POST',
-  url: 'https://api.zetaglobal.net/ver2/partner-dev-tap-cxm/subscribers/chaunceyp%40tapcxm.com/unsubscribe',
-  headers: {
+  url: 'https://dcs.adobedc.net/collection/148e4a8b400063a8443c4d3993eb48711bf400330f060473364b79b221fc313b?synchronousValidation=true',
+  headers:{
     accept: 'application/json',
     Accept: 'application/json',
     'content-type': 'application/json',
-    authorization: 'Basic YXBpOmIwODY2ODljZTAyYTg3Nzg1MDI0NGFmMWUzNWU5MDZi',
+    authorization: 'Bearer eyJhbGciOiJSUzI1NiIsIng1dSI6Imltc19uYTEta2V5LWF0LTEuY2VyIiwia2lkIjoiaW1zX25hMS1rZXktYXQtMSIsIml0dCI6ImF0In0.eyJpZCI6IjE3MTA3NzQyMjU1MTJfYzQwYWNkYjgtZDQ0NS00ZWYyLTgwZmItN2MxODdiOTRkN2M2X3VlMSIsIm9yZyI6IjE4RjMzMkNDNUI0REI0MTUwQTQ5NURGMEBBZG9iZU9yZyIsInR5cGUiOiJhY2Nlc3NfdG9rZW4iLCJjbGllbnRfaWQiOiIzYjE0N2I1NzRhNjA0ZjU2OTJhZTYxZmZlMzBkMGJhOCIsInVzZXJfaWQiOiJFMEYzMUQ4RjY1RjFFOEFFMEE0OTVFN0VAdGVjaGFjY3QuYWRvYmUuY29tIiwiYXMiOiJpbXMtbmExIiwiYWFfaWQiOiJFMEYzMUQ4RjY1RjFFOEFFMEE0OTVFN0VAdGVjaGFjY3QuYWRvYmUuY29tIiwiY3RwIjozLCJtb2kiOiI1NWZkYmU2MSIsImV4cGlyZXNfaW4iOiI4NjQwMDAwMCIsImNyZWF0ZWRfYXQiOiIxNzEwNzc0MjI1NTEyIiwic2NvcGUiOiJvcGVuaWQsc2Vzc2lvbixBZG9iZUlELHJlYWRfb3JnYW5pemF0aW9ucyxhZGRpdGlvbmFsX2luZm8ucHJvamVjdGVkUHJvZHVjdENvbnRleHQifQ.dPRfAfXteykjLudrJCaVEscIHvsi4DR5YsMbrYItrhi3KLYM9PhuhjzQ9IHHm8ynq2lDJPEVINk-L5HLreVcaUn59coAjmTgBDn1hFQhw_bPXjuk_doKgv2QzCXqib0MZnDlJ9ERwf0vPXg-sobEpNTduJ4vCqjh_g_5OQPcfJHDF8vO4ggHj1eI1bGAZ2Gs_d5-U7hh9nnNWpSNle6Lw6hOAzVZ8lrPMMpiPR7QxP-8El4nSGiGaul8a1BKds9gOi_zoxxlmJAmeah9da4uaoLpoZCTABvljANvogfN2nxr1W7gK6PxEVC8XtyYjPBrj6uMBAnyH_cSyul5nSpThw',
+    'x-api-key':'3b147b574a604f5692ae61ffe30d0ba8',
+    'x-gw-ims-org-id':'18F332CC5B4DB4150A495DF0@AdobeOrg',
+    'x-sandbox-name':'tapdemo',
     cors:'no-cors'
   },
-  data: {source: 'api', message_uid: '1700159102345e32c4885bcc8'}
-};
+  data:{
+    "header": {
+        "schemaRef": {
+            "id": "https://ns.adobe.com/taplondonptrsd/schemas/6d67a54898bb1107859f15b536ff2e6873d361babe0542bd",
+            "contentType": "application/vnd.adobe.xed-full+json;version=1.0"
+        },
+        "imsOrgId": "18F332CC5B4DB4150A495DF0@AdobeOrg",
+        "datasetId": "65f9b2c2c2089a2c9f097526",
+        //"flowId": "2ede9fe4-7fc0-4088-b6c8-0e2e923cc358",
+        "source": {
+            "name": "Chauncey's event Flow"
+        }
+    },
+    "body": {
+        "xdmMeta": {
+            "schemaRef": {
+                "id": "https://ns.adobe.com/taplondonptrsd/schemas/6d67a54898bb1107859f15b536ff2e6873d361babe0542bd",
+                "contentType": "application/vnd.adobe.xed-full+json;version=1.0"
+            }
+        },
+        "xdmEntity": {
+            '_taplondontrsd':{
+              'eventMessage':'User abandoned cart on anaylytics project'
+            },
+            'personalEmail':{
+              'address':'chaunceyplum@gmail.com'
+            },
+            '_id':String(uuidv4()),
+            'eventType':'AbandonCart',
+            'timestamp':datenowstr,
+            'personID':'GrnmrVkqC3LRA6-TEStb16t1KqId-JC8mPRO'
 
+        }
+    }
+}
+}
+console.log(options.data)
 const blahData = axios
   .request(options)
   .then(function (response) {
@@ -154,6 +237,8 @@ const blahData = axios
   //   console.error(error);
   // });
 
+
+  
 } );
 </script>
 </div>
@@ -246,13 +331,22 @@ const blahData = axios
       //  console.log('input tracked')
        
       // }})
-      e.preventDefault();
+      
       // var event = { "Event": {
       //   "EventType":"test_site_user_searched",
       //   "SearchInput":input
       //  } }
       // window.adobeDataLayer.push(event);
+      sendinblue.track(
+  'submitted search'/*mandatory*/,
+
+  {
+    'event data': {"email_id":"chaunceyplum@gmail.com","search_value": input }
+  }
+);
+e.preventDefault();
      }
+     
     </script>
     <script>
       console.log(adobeDataLayer)
