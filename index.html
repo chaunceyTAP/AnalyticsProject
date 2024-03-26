@@ -26,7 +26,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
          <script src="adobe-client-data-layer.min.js" async defer></script> 
 <!-- <script src="https://assets.adobedtm.com/7595315f3cd2/cada6bcd1297/launch-a1c5703863fa-development.min.js" async></script> -->
 <script src="https://assets.adobedtm.com/7595315f3cd2/cada6bcd1297/launch-a1c5703863fa-development.min.js" async></script>
-<script>
+<!-- <script>
  //p13n.js
 const site_id = 'partner-dev-tap-cxm'
 ;(function (b, t, r, a, i, n) {
@@ -46,8 +46,8 @@ const site_id = 'partner-dev-tap-cxm'
   'script',
   'https://cdn.boomtrain.com/p13n/' + site_id + '/p13n.min.js'
 );
-</script>
-<script type="text/javascript">
+</script> -->
+<!-- <script type="text/javascript">
 (function() {
     window.sib = {
         equeue: [],
@@ -72,7 +72,7 @@ const site_id = 'partner-dev-tap-cxm'
         i = document.getElementsByTagName("script")[0];
     n.type = "text/javascript", n.id = "sendinblue-js", n.async = !0, n.src = "https://sibautomation.com/sa.js?key=" + window.sib.client_key, i.parentNode.insertBefore(n, i), window.sendinblue.page();
 })();
-</script>
+</script> -->
   </head>
   <body>
     <header>
@@ -162,6 +162,7 @@ $( "#blah" ).on( "click", function() {
 //   },
 //   data: {source: 'api', message_uid: '1700159102345e32c4885bcc8'}
 // };
+const EmailAddress = 'chaunceyplum@gmail.com'
 const datenow = new Date()
 const datenowstr = datenow .toISOString()
 function uuidv4() {
@@ -169,6 +170,7 @@ function uuidv4() {
     (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16)
   );
 }
+
 
 const options = {
   method: 'POST',
@@ -216,7 +218,7 @@ const options = {
 
         }
     }
-}
+  }
 }
 console.log(options.data)
 const blahData = axios
