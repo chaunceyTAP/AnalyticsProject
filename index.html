@@ -101,7 +101,7 @@ const site_id = 'partner-dev-tap-cxm'
              
               
             </ul>
-            <form class="d-flex" role="search">
+            <!-- <form class="d-flex" role="search">
               <input
                 class="form-control me-2"
                 type="search"
@@ -112,7 +112,7 @@ const site_id = 'partner-dev-tap-cxm'
               <button class="btn btn-outline-success" type="submit" onclick="sendUserSearch()">
                 Search
               </button>
-            </form>
+            </form> -->
           </div>
         </div>
       </nav>
@@ -144,7 +144,7 @@ const site_id = 'partner-dev-tap-cxm'
 <br><br><br>
 <div class="container">
 <h4>click submit to send abandon cart event to CDP </h4>
-<button id="blah">submit</button>
+<a id="blah" class="btn btn-dark">submit</a>
 <script>
 
 $( "#blah" ).on( "click", function() {
@@ -179,7 +179,7 @@ const options = {
     accept: 'application/json',
     Accept: 'application/json',
     'content-type': 'application/json',
-    authorization: 'Bearer eyJhbGciOiJSUzI1NiIsIng1dSI6Imltc19uYTEta2V5LWF0LTEuY2VyIiwia2lkIjoiaW1zX25hMS1rZXktYXQtMSIsIml0dCI6ImF0In0.eyJpZCI6IjE3MTE0NjAzNzM3ODZfMWNlMWUyOGUtZjdjNy00ZTAyLTg1NTgtNDU0MzEwODcxOWQ4X3VlMSIsIm9yZyI6IjE4RjMzMkNDNUI0REI0MTUwQTQ5NURGMEBBZG9iZU9yZyIsInR5cGUiOiJhY2Nlc3NfdG9rZW4iLCJjbGllbnRfaWQiOiIzYjE0N2I1NzRhNjA0ZjU2OTJhZTYxZmZlMzBkMGJhOCIsInVzZXJfaWQiOiJFMEYzMUQ4RjY1RjFFOEFFMEE0OTVFN0VAdGVjaGFjY3QuYWRvYmUuY29tIiwiYXMiOiJpbXMtbmExIiwiYWFfaWQiOiJFMEYzMUQ4RjY1RjFFOEFFMEE0OTVFN0VAdGVjaGFjY3QuYWRvYmUuY29tIiwiY3RwIjozLCJtb2kiOiI1YmRmOGI0MCIsImV4cGlyZXNfaW4iOiI4NjQwMDAwMCIsImNyZWF0ZWRfYXQiOiIxNzExNDYwMzczNzg2Iiwic2NvcGUiOiJvcGVuaWQsc2Vzc2lvbixBZG9iZUlELHJlYWRfb3JnYW5pemF0aW9ucyxhZGRpdGlvbmFsX2luZm8ucHJvamVjdGVkUHJvZHVjdENvbnRleHQifQ.XtVjirpKLlsA1noC9i3h4yd50kw3WegGxDtcPq7Zf7WZzR7d4Plj46JscByPEAgfMmNw_W5_QBwMdmbT26W9g0zXpR__8X2_6R8kEox1R1A4caLiaLlMkFa2VyHV7irvtU4B4afPEXFZnzDnokpYEDmVGfMRuuucWkq6bdrwMbnKibsVK4XzoJRPHzh3JxfSaNlutdjBqeEz4hYQMzjjmbJmfZAEDK10xveJ2WvNlDdjK07F7tjxRr8MHRSPSfMLCcham_uhJ92PGIDGfi2WyRHdiQv_aOmbxKD0T7FNzuC3agIbmBR3mK22QbTZniLaDhz3NFbrpNd-t7KRVyi7FQ',
+    authorization: `Bearer $process.env.AUTH_TOKEN}`,
     'x-gw-ims-org-id':'18F332CC5B4DB4150A495DF0@AdobeOrg',
     'x-sandbox-name':'tapdemo',
     cors:'no-cors'
@@ -324,7 +324,7 @@ const blahData = axios
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
-    <script>
+    <!-- <script>
      const sendUserSearch = () => {
       var input = document.getElementById('userInput').value;
       console.log(input)
@@ -348,7 +348,7 @@ const blahData = axios
 e.preventDefault();
      }
      
-    </script>
+    </script> -->
     <script>
       console.log(adobeDataLayer)
     </script>
