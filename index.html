@@ -12,66 +12,26 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
-    <!-- Google Tag Manager -->
-<!-- <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-WH27HTSJ');</script> -->
-<!-- End Google Tag Manager -->
     <script>
-            window.adobeDataLayer = window.adobeDataLayer || [];
+  !function(n,o){o.forEach(function(o){n[o]||((n.__alloyNS=n.__alloyNS||
+  []).push(o),n[o]=function(){var u=arguments;return new Promise(
+  function(i,l){n[o].q.push([i,l,u])})},n[o].q=[])})}
+  (window,["alloy"]);
+</script>
+<script src="https://cdn1.adoberesources.net/alloy/2.19.1/alloy.min.js" async></script>
+
+    <script>
+            // window.adobeDataLayer = window.adobeDataLayer || [];
             // window.adobeDataLayer.push({ "test1": "Hello World" });
         </script>
-         <script src="adobe-client-data-layer.min.js" async defer></script> 
+         <!-- <script src="adobe-client-data-layer.min.js" async defer></script>  -->
 <!-- <script src="https://assets.adobedtm.com/7595315f3cd2/cada6bcd1297/launch-a1c5703863fa-development.min.js" async></script> -->
-<script src="https://assets.adobedtm.com/7595315f3cd2/cada6bcd1297/launch-a1c5703863fa-development.min.js" async></script>
+<!-- <script src="https://assets.adobedtm.com/7595315f3cd2/cada6bcd1297/launch-a1c5703863fa-development.min.js" async></script> -->
+
+
 <!-- <script>
- //p13n.js
-const site_id = 'partner-dev-tap-cxm'
-;(function (b, t, r, a, i, n) {
-  ;(b['bt'] =
-    b['bt'] ||
-    function () {
-      ;(b['_bt'] = b['_bt'] || []).push(arguments)
-    }),
-    (i = t.createElement(r)),
-    (n = t.getElementsByTagName(r)[0])
-  i.async = 1
-  i.src = a
-  n.parentNode.insertBefore(i, n)
-})(
-  window,
-  document,
-  'script',
-  'https://cdn.boomtrain.com/p13n/' + site_id + '/p13n.min.js'
-);
-</script> -->
-<!-- <script type="text/javascript">
-(function() {
-    window.sib = {
-        equeue: [],
-        client_key: "6onbbgpqb4z8sjvrgrd0li8o"
-    };
-    /* OPTIONAL: email for identify request*/
-     window.sib.email_id = 'chaunceyp@tapcxm.com';
-    window.sendinblue = {};
-    for (var j = ['track', 'identify', 'trackLink', 'page'], i = 0; i < j.length; i++) {
-    (function(k) {
-        window.sendinblue[k] = function() {
-            var arg = Array.prototype.slice.call(arguments);
-            (window.sib[k] || function() {
-                    var t = {};
-                    t[k] = arg;
-                    window.sib.equeue.push(t);
-                })(arg[0], arg[1], arg[2], arg[3]);
-            };
-        })(j[i]);
-    }
-    var n = document.createElement("script"),
-        i = document.getElementsByTagName("script")[0];
-    n.type = "text/javascript", n.id = "sendinblue-js", n.async = !0, n.src = "https://sibautomation.com/sa.js?key=" + window.sib.client_key, i.parentNode.insertBefore(n, i), window.sendinblue.page();
-})();
+  require("dotenv").config()
+
 </script> -->
   </head>
   <body>
@@ -101,18 +61,7 @@ const site_id = 'partner-dev-tap-cxm'
              
               
             </ul>
-            <!-- <form class="d-flex" role="search">
-              <input
-                class="form-control me-2"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-                id="userInput"
-              />
-              <button class="btn btn-outline-success" type="submit" onclick="sendUserSearch()">
-                Search
-              </button>
-            </form> -->
+         
           </div>
         </div>
       </nav>
@@ -146,23 +95,12 @@ const site_id = 'partner-dev-tap-cxm'
 <h4>click submit to send abandon cart event to CDP </h4>
 <a id="blah" class="btn btn-dark">submit</a>
 <script>
-
 $( "#blah" ).on( "click", function() {
  
 
-// const options = {
-//   method: 'POST',
-//   url: 'https://api.zetaglobal.net/ver2/partner-dev-tap-cxm/subscribers/chaunceyp%40tapcxm.com/unsubscribe',
-//   headers: {
-//     accept: 'application/json',
-//     Accept: 'application/json',
-//     'content-type': 'application/json',
-//     authorization: 'Basic YXBpOmIwODY2ODljZTAyYTg3Nzg1MDI0NGFmMWUzNWU5MDZi',
-//     cors:'no-cors'
-//   },
-//   data: {source: 'api', message_uid: '1700159102345e32c4885bcc8'}
-// };
 const EmailAddress = 'chaunceyplum@gmail.com'
+const personID = 'GrnmrVkqC3LRA6-TEStb16t1KqId-JC8mPRO'
+const id = String(uuidv4())
 const datenow = new Date()
 const datenowstr = datenow .toISOString()
 function uuidv4() {
@@ -179,7 +117,7 @@ const options = {
     accept: 'application/json',
     Accept: 'application/json',
     'content-type': 'application/json',
-    authorization: `Bearer $process.env.AUTH_TOKEN}`,
+    authorization: `Bearer ${process.env.AUTH_TOKEN}`,
     'x-gw-ims-org-id':'18F332CC5B4DB4150A495DF0@AdobeOrg',
     'x-sandbox-name':'tapdemo',
     cors:'no-cors'
@@ -192,9 +130,9 @@ const options = {
         },
         "imsOrgId": "18F332CC5B4DB4150A495DF0@AdobeOrg",
         "datasetId": "65f9b2c2c2089a2c9f097526",
-        //"flowId": "2ede9fe4-7fc0-4088-b6c8-0e2e923cc358",
+        //"flowId": "06c00804-b371-4aee-8fd1-69d9e90cb14a",
         "source": {
-            "name": "Chauncey's event Flow"
+            "name": "Edge Network flow from datastream CP datastream to dataset 65f9b2c2c2089a2c9f097526"
         }
     },
     "body": {
@@ -209,9 +147,9 @@ const options = {
               'eventMessage':'User abandoned cart on anaylytics project'
             },
             'personalEmail':{
-              'address':'chaunceyplum@gmail.com'
+              'address':EmailAddress
             },
-            '_id':String(uuidv4()),
+            '_id':id,
             'eventType':'AbandonCart',
             'timestamp':datenowstr,
             'personID':'GrnmrVkqC3LRA6-TEStb16t1KqId-JC8mPRO'
@@ -220,24 +158,20 @@ const options = {
     }
   }
 }
-console.log(options.data)
+const entity = (options ) => {
+  console.log(options.data.xdmEntity)
+  return options.data.xdmEntity
+}
+console.log(options.data.xdmEntity)
 const blahData = axios
   .request(options)
   .then(function (response) {
     console.log(response.data);
+
   })
   .catch(function (error) {
     console.error(error);
   });
-  // axios
-  // .request(options)
-  // .then(function (response) {
-  //   console.log(response.data);
-  // })
-  // .catch(function (error) {
-  //   console.error(error);
-  // });
-
 
   
 } );
@@ -350,7 +284,7 @@ e.preventDefault();
      
     </script> -->
     <script>
-      console.log(adobeDataLayer)
+      // console.log(adobeDataLayer)
     </script>
     <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WH27HTSJ"

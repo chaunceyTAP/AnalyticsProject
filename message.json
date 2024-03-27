@@ -1,0 +1,17 @@
+{
+  "name": "datastream",
+  "timestampMs": 1711486351817,
+  "attributes": {
+    "requestId": "24ce8102-995d-4320-9fe3-1c2e5b038bc8"
+  },
+  "messages": [
+    "Datastream configuration in Experience Edge.",
+    "{\"access_type\":\"mixed\",\"com_adobe_experience_platform\":{\"datasets\":{\"event\":[{\"datasetId\":\"65f9b2c2c2089a2c9f097526\",\"flowId\":\"06c00804-b371-4aee-8fd1-69d9e90cb14a\",\"primary\":true,\"xdmSchema\":\"https://ns.adobe.com/taplondonptrsd/schemas/6d67a54898bb1107859f15b536ff2e6873d361babe0542bd\"}],\"profile\":[{\"datasetId\":\"65f9b2c2c2089a2c9f097526\",\"flowId\":\"f355274a-dc84-4b2b-886b-e5f407f2b08c\",\"primary\":true,\"xdmSchema\":\"https://ns.adobe.com/taplondonptrsd/schemas/6d67a54898bb1107859f15b536ff2e6873d361babe0542bd\"}]},\"enabled\":true},\"com_adobe_experience_platform_ajo\":{\"containerId\":\"not-used\",\"enabled\":true},\"com_adobe_experience_platform_edge_destinations\":{\"enabled\":true},\"com_adobe_experience_platform_edge_segmentation\":{\"enabled\":true},\"com_adobe_identity\":{\"idSyncContainerId__additional\":[],\"idSyncEnabled\":false},\"default_consent\":\"in\",\"device_lookup\":{\"additionalProperties\":{},\"enabled\":false,\"info\":{\"additionalProperties\":{},\"browser\":false,\"device\":false,\"hardware\":false,\"operating_system\":false}},\"geo_lookup\":{\"fields\":{\"carrier\":false,\"city\":false,\"country\":false,\"dma\":false,\"domain\":false,\"isp\":false,\"latitude\":false,\"longitude\":false,\"postal_code\":false,\"state_province\":false}},\"geo_resolution\":\"none\",\"input\":{\"additionalProperties\":{},\"mapping\":{\"enabled\":true,\"id\":\"25f2ed4fb03e4c5a8e1b0c2952182829\",\"version\":\"2\"},\"schemaId\":\"https://ns.adobe.com/taplondonptrsd/schemas/6d67a54898bb1107859f15b536ff2e6873d361babe0542bd\"},\"ip_obfuscation\":\"none\",\"state\":{\"first_party_id\":{\"cookie\":{\"enabled\":false,\"name\":\"FPID\"}}},\"type\":\"devices\",\"user_agent_collection\":{\"additionalProperties\":{},\"enabled\":true}}"
+  ],
+  "logLevel": "log",
+  "context": {
+    "X-Konductor": "N/A",
+    "X-Adobe-Edge": "VA6",
+    "datastreamId": "47d03159-2436-43b5-9d1a-1f851cea1168"
+  }
+}
